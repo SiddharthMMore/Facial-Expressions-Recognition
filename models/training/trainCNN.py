@@ -47,10 +47,10 @@ model = Sequential()
 # Block-1
 
 model.add(Conv2D(32,(3,3),padding='same',kernel_initializer='he_normal',input_shape=(img_rows,img_cols,1)))
-model.add(Activation('elu'))
+model.add(Activation('relu'))
 model.add(BatchNormalization())
 model.add(Conv2D(32,(3,3),padding='same',kernel_initializer='he_normal',input_shape=(img_rows,img_cols,1)))
-model.add(Activation('elu'))
+model.add(Activation('relu'))
 model.add(BatchNormalization())
 model.add(MaxPooling2D(pool_size=(2,2)))
 model.add(Dropout(0.2))
@@ -58,10 +58,10 @@ model.add(Dropout(0.2))
 # Block-2 
 
 model.add(Conv2D(64,(3,3),padding='same',kernel_initializer='he_normal'))
-model.add(Activation('elu'))
+model.add(Activation('relu'))
 model.add(BatchNormalization())
 model.add(Conv2D(64,(3,3),padding='same',kernel_initializer='he_normal'))
-model.add(Activation('elu'))
+model.add(Activation('relu'))
 model.add(BatchNormalization())
 model.add(MaxPooling2D(pool_size=(2,2)))
 model.add(Dropout(0.2))
@@ -69,10 +69,10 @@ model.add(Dropout(0.2))
 # Block-3
 
 model.add(Conv2D(128,(3,3),padding='same',kernel_initializer='he_normal'))
-model.add(Activation('elu'))
+model.add(Activation('relu'))
 model.add(BatchNormalization())
 model.add(Conv2D(128,(3,3),padding='same',kernel_initializer='he_normal'))
-model.add(Activation('elu'))
+model.add(Activation('relu'))
 model.add(BatchNormalization())
 model.add(MaxPooling2D(pool_size=(2,2)))
 model.add(Dropout(0.2))
@@ -80,10 +80,10 @@ model.add(Dropout(0.2))
 # Block-4 
 
 model.add(Conv2D(256,(3,3),padding='same',kernel_initializer='he_normal'))
-model.add(Activation('elu'))
+model.add(Activation('relu'))
 model.add(BatchNormalization())
 model.add(Conv2D(256,(3,3),padding='same',kernel_initializer='he_normal'))
-model.add(Activation('elu'))
+model.add(Activation('relu'))
 model.add(BatchNormalization())
 model.add(MaxPooling2D(pool_size=(2,2)))
 model.add(Dropout(0.2))
@@ -92,14 +92,14 @@ model.add(Dropout(0.2))
 
 model.add(Flatten())
 model.add(Dense(64,kernel_initializer='he_normal'))
-model.add(Activation('elu'))
+model.add(Activation('relu'))
 model.add(BatchNormalization())
 model.add(Dropout(0.5))
 
 # Block-6
 
 model.add(Dense(64,kernel_initializer='he_normal'))
-model.add(Activation('elu'))
+model.add(Activation('relu'))
 model.add(BatchNormalization())
 model.add(Dropout(0.5))
 
